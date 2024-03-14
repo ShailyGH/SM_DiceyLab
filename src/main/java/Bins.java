@@ -39,4 +39,10 @@ public class Bins
     public int getNumOfKeys() {
         return numOfKeys;
     }
+
+    public void incrementBin (Integer binNumber) {
+        Integer result = countTotals.getOrDefault(binNumber, 0);
+        result++;
+        countTotals.put(binNumber, result);
+    }
 }

@@ -27,13 +27,13 @@ public class BinsTest {
     {
         Dice dice = new Dice(3);
         Bins bins = new Bins(dice);
-        bins.storeCountInBin(dice, 50);
+        bins.storeCountInBin(dice, 48);
         int actual = 0;
         for (int i = 3; i < 18; i++)
         {
             actual += bins.countTotals.get(i);
         }
-        int expected = 50;
+        int expected = 48;
 
         Assert.assertEquals(expected, actual);
     }
